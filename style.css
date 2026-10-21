@@ -1,0 +1,490 @@
+/* Professional Health & Fitness Background */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #07111F 0%,
+        #102A43 45%,
+        #123B4A 100%
+    );
+    background-color: #07111F;
+    background-attachment: fixed;
+    transition: background 0.4s ease;
+}
+
+/* Professional Health & Fitness Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    background: #081522;
+    border-bottom: 1px solid rgba(0, 212, 170, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+.nav-links,
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    color: #DCE7F0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #00D4AA;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00D4AA;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-signin,
+.btn-register {
+    padding: 10px 19px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-signin {
+    color: #00D4AA;
+    border: 1px solid #00D4AA;
+    background: transparent;
+}
+
+.btn-signin:hover {
+    background: rgba(0, 212, 170, 0.12);
+    transform: translateY(-2px);
+}
+
+.btn-register {
+    color: #081522;
+    background: #00D4AA;
+    border: 1px solid #00D4AA;
+}
+
+.btn-register:hover {
+    background: #36F0C4;
+    border-color: #36F0C4;
+    transform: translateY(-2px);
+}
+
+
+/* Professional Health & Fitness Navbar */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 5%;
+    background: #081522;
+    border-bottom: 1px solid rgba(0, 212, 170, 0.25);
+    font-family: Arial, sans-serif;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #F0F7FC;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.brand strong {
+    color: #00D4AA;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    transition: transform 0.3s ease;
+}
+
+.brand:hover .brand-icon {
+    transform: scale(1.08) rotate(-5deg);
+}
+
+.nav-links,
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 8px 0;
+    color: #DCE7F0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00D4AA;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+    color: #00D4AA;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+    width: 100%;
+}
+
+.btn-signin,
+.btn-register {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid #00D4AA;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-signin {
+    color: #00D4AA;
+    background: transparent;
+}
+
+.btn-signin:hover {
+    color: #081522;
+    background: #00D4AA;
+    transform: translateY(-2px);
+}
+
+.btn-register {
+    color: #081522;
+    background: #00D4AA;
+}
+
+.btn-register:hover {
+    background: #48F2CA;
+    border-color: #48F2CA;
+    box-shadow: 0 4px 18px rgba(0, 212, 170, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Keyboard Accessibility */
+.navbar a:focus-visible {
+    outline: 2px solid #48F2CA;
+    outline-offset: 4px;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px;
+        gap: 18px;
+    }
+
+    .brand {
+        margin: 0;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+/* Calorie Calculator - Navbar Safe CSS */
+
+.calculator,
+.calculator * {
+    box-sizing: border-box;
+}
+
+.calculator {
+    width: calc(100% - 32px);
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 32px;
+    font-family: Arial, sans-serif;
+    color: #f1f5f9;
+    background: linear-gradient(145deg, #0f1e2d, #102b3b);
+    border: 1px solid rgba(45, 212, 191, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+.calculator h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #5eead4;
+    margin: 0 0 8px;
+}
+
+.calculator .subtitle {
+    text-align: center;
+    color: #a7b8c8;
+    font-size: 14px;
+    margin: 0 0 26px;
+}
+
+.calculator .gender-options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.calculator .gender-options label {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #34485b;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calculator .gender-options label:has(input:checked) {
+    border-color: #2dd4bf;
+    background: rgba(45, 212, 191, 0.1);
+}
+
+.calculator .gender-options input {
+    accent-color: #2dd4bf;
+    margin-right: 6px;
+}
+
+.calculator .form-group {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 18px;
+}
+
+.calculator .form-row {
+    display: flex;
+    gap: 14px;
+}
+
+.calculator .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+.calculator input[type="number"],
+.calculator select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 13px 11px;
+    border: 1px solid #34485b;
+    border-radius: 9px;
+    background: #0b1928;
+    color: #f8fafc;
+    font-size: 14px;
+    outline: none;
+}
+
+.calculator input:focus,
+.calculator select:focus {
+    border-color: #2dd4bf;
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.12);
+}
+
+.calculator button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #2dd4bf;
+    color: #06231f;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.calculator button:hover {
+    background: #5eead4;
+    transform: translateY(-2px);
+}
+
+.calculator .result {
+    margin-top: 22px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    background: #102b35;
+    border: 1px solid #2dd4bf;
+}
+
+.calculator .result h2 {
+    font-size: 17px;
+    color: #a7f3d0;
+    margin: 0 0 10px;
+}
+
+.calculator .result .calories {
+    font-size: 34px;
+    font-weight: bold;
+    color: #5eead4;
+    margin-bottom: 8px;
+}
+
+.calculator .result p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 6px 0;
+}
+
+.calculator .disclaimer {
+    margin: 18px 0 0;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+@media (max-width: 420px) {
+    .calculator {
+        padding: 22px 17px;
+        margin: 25px auto;
+    }
+
+    .calculator h1 {
+        font-size: 24px;
+    }
+
+    .calculator .form-row {
+        gap: 10px;
+    }
+}
+
+/* Fitness Footer - Isolated Styles */
+
+.fitness-footer {
+    width: 1020px;
+    margin-top: 40px;
+    padding: 25px 20px;
+    background: #07111f;
+    border-top: 1px solid rgba(45, 212, 191, 0.3);
+    color: #f1f5f9;
+}
+
+.fitness-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fitness-footer a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+.fitness-footer .footer-email,
+.fitness-footer .footer-privacy {
+    font-size: 14px;
+}
+
+.fitness-footer a:hover {
+    color: #2dd4bf;
+}
+
+.fitness-footer .footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.fitness-footer .footer-socials a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #34485b;
+    border-radius: 50%;
+    font-size: 18px;
+    background: #102033;
+}
+
+.fitness-footer .footer-socials a:hover {
+    color: #07111f;
+    background: #2dd4bf;
+    border-color: #2dd4bf;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .fitness-footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+}
+
