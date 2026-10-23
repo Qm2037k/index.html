@@ -61,3 +61,9 @@ form.addEventListener("submit", function (event) {
 
     result.scrollIntoView({ behavior: "smooth", block: "nearest" });
 });
+
+const aboutBtn = document.getElementById("aboutBtn");
+
+aboutBtn.addEventListener("click", function () {
+    window.location.href = "about.html";
+});
